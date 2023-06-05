@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_Wd3WMAMzEe6rjutcN3Qc4Q" name="MeuPerfil" metaclassReference="__XR_sAMzEe6rjutcN3Qc4Q _pHg8cAM0Ee6rjutcN3Qc4Q _p6BXcAM0Ee6rjutcN3Qc4Q">
+  <elementImport xmi:id="_WfqtAAMzEe6rjutcN3Qc4Q">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_Wfyo0AMzEe6rjutcN3Qc4Q">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_WfzP4AMzEe6rjutcN3Qc4Q">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_WfzP4QMzEe6rjutcN3Qc4Q">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <elementImport xmi:id="__XR_sAMzEe6rjutcN3Qc4Q">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Package"/>
+  </elementImport>
+  <elementImport xmi:id="_pHg8cAM0Ee6rjutcN3Qc4Q">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+  </elementImport>
+  <elementImport xmi:id="_p6BXcAM0Ee6rjutcN3Qc4Q">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Association"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_ROD0AAM0Ee6rjutcN3Qc4Q" name="Arquivo">
+    <ownedAttribute xmi:id="_LS8D8gM1Ee6rjutcN3Qc4Q" name="base_Package" association="_LS8D8AM1Ee6rjutcN3Qc4Q">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Package"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_33disAM0Ee6rjutcN3Qc4Q" name="Documento">
+    <ownedAttribute xmi:id="_MjuWYAM1Ee6rjutcN3Qc4Q" name="base_Class" association="_MjtvUAM1Ee6rjutcN3Qc4Q">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_5BSRgAM0Ee6rjutcN3Qc4Q" name="Secao">
+    <ownedAttribute xmi:id="_k0fyogM1Ee6rjutcN3Qc4Q" name="base_Class" association="_k0fyoAM1Ee6rjutcN3Qc4Q">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_DaPCUAM1Ee6rjutcN3Qc4Q" name="Projeto">
+    <ownedAttribute xmi:id="_KoagQgM1Ee6rjutcN3Qc4Q" name="base_Package" association="_KoagQAM1Ee6rjutcN3Qc4Q">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Package"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_KoagQAM1Ee6rjutcN3Qc4Q" name="Package_Projeto" memberEnd="_KoagQQM1Ee6rjutcN3Qc4Q _KoagQgM1Ee6rjutcN3Qc4Q">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_KoagQQM1Ee6rjutcN3Qc4Q" name="extension_Projeto" type="_DaPCUAM1Ee6rjutcN3Qc4Q" aggregation="composite" association="_KoagQAM1Ee6rjutcN3Qc4Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_LS8D8AM1Ee6rjutcN3Qc4Q" name="Package_Arquivo" memberEnd="_LS8D8QM1Ee6rjutcN3Qc4Q _LS8D8gM1Ee6rjutcN3Qc4Q">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_LS8D8QM1Ee6rjutcN3Qc4Q" name="extension_Arquivo" type="_ROD0AAM0Ee6rjutcN3Qc4Q" aggregation="composite" association="_LS8D8AM1Ee6rjutcN3Qc4Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_MjtvUAM1Ee6rjutcN3Qc4Q" name="Class_Documento" memberEnd="_MjtvUQM1Ee6rjutcN3Qc4Q _MjuWYAM1Ee6rjutcN3Qc4Q">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_MjtvUQM1Ee6rjutcN3Qc4Q" name="extension_Documento" type="_33disAM0Ee6rjutcN3Qc4Q" aggregation="composite" association="_MjtvUAM1Ee6rjutcN3Qc4Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_OKEpIAM1Ee6rjutcN3Qc4Q" name="ReferenciaGeral">
+    <ownedAttribute xmi:id="_bdWdEgM1Ee6rjutcN3Qc4Q" name="base_Class" association="_bdWdEAM1Ee6rjutcN3Qc4Q">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_bdWdEAM1Ee6rjutcN3Qc4Q" name="Class_Referencia Geral" memberEnd="_bdWdEQM1Ee6rjutcN3Qc4Q _bdWdEgM1Ee6rjutcN3Qc4Q">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_bdWdEQM1Ee6rjutcN3Qc4Q" name="extension_Referencia Geral" type="_OKEpIAM1Ee6rjutcN3Qc4Q" aggregation="composite" association="_bdWdEAM1Ee6rjutcN3Qc4Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_k0fyoAM1Ee6rjutcN3Qc4Q" name="Class_Secao" memberEnd="_k0fyoQM1Ee6rjutcN3Qc4Q _k0fyogM1Ee6rjutcN3Qc4Q">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_k0fyoQM1Ee6rjutcN3Qc4Q" name="extension_Secao" type="_5BSRgAM0Ee6rjutcN3Qc4Q" aggregation="composite" association="_k0fyoAM1Ee6rjutcN3Qc4Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_mnvR4AM1Ee6rjutcN3Qc4Q" name="Bibliografia">
+    <ownedAttribute xmi:id="_Zfo9wgM2Ee6rjutcN3Qc4Q" name="base_Association" association="_Zfo9wAM2Ee6rjutcN3Qc4Q">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Association"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_u0U40AM1Ee6rjutcN3Qc4Q" name="Imagem">
+    <ownedAttribute xmi:id="_Z7aTwgM2Ee6rjutcN3Qc4Q" name="base_Association" association="_Z7aTwAM2Ee6rjutcN3Qc4Q">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Association"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_w_a3YAM1Ee6rjutcN3Qc4Q" name="DocSecundario">
+    <ownedAttribute xmi:id="_bCHdIQM2Ee6rjutcN3Qc4Q" name="base_Association" association="_bCG2EAM2Ee6rjutcN3Qc4Q">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Association"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_1Z5eoAM1Ee6rjutcN3Qc4Q" name="DocPrincipal">
+    <ownedAttribute xmi:id="_al73cgM2Ee6rjutcN3Qc4Q" name="base_Association" association="_al73cAM2Ee6rjutcN3Qc4Q">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Association"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_KNqogAM2Ee6rjutcN3Qc4Q" name="Pacote">
+    <ownedAttribute xmi:id="_bsrdEAM2Ee6rjutcN3Qc4Q" name="base_Association" association="_bsq2AAM2Ee6rjutcN3Qc4Q">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Association"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_Zfo9wAM2Ee6rjutcN3Qc4Q" name="Association_Bibliografia" memberEnd="_Zfo9wQM2Ee6rjutcN3Qc4Q _Zfo9wgM2Ee6rjutcN3Qc4Q">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_Zfo9wQM2Ee6rjutcN3Qc4Q" name="extension_Bibliografia" type="_mnvR4AM1Ee6rjutcN3Qc4Q" aggregation="composite" association="_Zfo9wAM2Ee6rjutcN3Qc4Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_Z7aTwAM2Ee6rjutcN3Qc4Q" name="Association_Imagem" memberEnd="_Z7aTwQM2Ee6rjutcN3Qc4Q _Z7aTwgM2Ee6rjutcN3Qc4Q">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_Z7aTwQM2Ee6rjutcN3Qc4Q" name="extension_Imagem" type="_u0U40AM1Ee6rjutcN3Qc4Q" aggregation="composite" association="_Z7aTwAM2Ee6rjutcN3Qc4Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_al73cAM2Ee6rjutcN3Qc4Q" name="Association_DocPrincipal" memberEnd="_al73cQM2Ee6rjutcN3Qc4Q _al73cgM2Ee6rjutcN3Qc4Q">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_al73cQM2Ee6rjutcN3Qc4Q" name="extension_DocPrincipal" type="_1Z5eoAM1Ee6rjutcN3Qc4Q" aggregation="composite" association="_al73cAM2Ee6rjutcN3Qc4Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_bCG2EAM2Ee6rjutcN3Qc4Q" name="Association_DocSecundario" memberEnd="_bCHdIAM2Ee6rjutcN3Qc4Q _bCHdIQM2Ee6rjutcN3Qc4Q">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_bCHdIAM2Ee6rjutcN3Qc4Q" name="extension_DocSecundario" type="_w_a3YAM1Ee6rjutcN3Qc4Q" aggregation="composite" association="_bCG2EAM2Ee6rjutcN3Qc4Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_bsq2AAM2Ee6rjutcN3Qc4Q" name="Association_Pacote" memberEnd="_bsq2AQM2Ee6rjutcN3Qc4Q _bsrdEAM2Ee6rjutcN3Qc4Q">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_bsq2AQM2Ee6rjutcN3Qc4Q" name="extension_Pacote" type="_KNqogAM2Ee6rjutcN3Qc4Q" aggregation="composite" association="_bsq2AAM2Ee6rjutcN3Qc4Q"/>
+  </packagedElement>
+</uml:Profile>

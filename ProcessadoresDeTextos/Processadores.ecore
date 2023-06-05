@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Processadores">
+  <eClassifiers xsi:type="ecore:EClass" name="Projeto">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="titulo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="autor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="periodo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="arquivos" upperBound="-1"
+        eType="#//Arquivos" containment="true" eOpposite="#//Arquivos/projeto"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Arquivos">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="projeto" lowerBound="1"
+        eType="#//Projeto" eOpposite="#//Projeto/arquivos"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nome" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Documento" eSuperTypes="#//Arquivos">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="secoes" upperBound="-1"
+        eType="#//Secao" containment="true" eOpposite="#//Secao/documento"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referencias" upperBound="-1"
+        eType="#//ReferenciaGeral" containment="true" eOpposite="#//ReferenciaGeral/documento"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DocPrincipal" eSuperTypes="#//Documento">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="titulo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="autor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="docSecundario" upperBound="-1"
+        eType="#//DocSecundario" containment="true" eOpposite="#//DocSecundario/docprincipal"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pacote" upperBound="-1"
+        eType="#//Pacote" eOpposite="#//Pacote/docPrincipal"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DocSecundario" eSuperTypes="#//Documento">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="docprincipal" eType="#//DocPrincipal"
+        eOpposite="#//DocPrincipal/docSecundario"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pacote">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nome" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="docPrincipal" upperBound="-1"
+        eType="#//DocPrincipal" eOpposite="#//DocPrincipal/pacote"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Imagem" eSuperTypes="#//Arquivos">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referenciaGeral" eType="#//ReferenciaGeral"
+        eOpposite="#//ReferenciaGeral/imagem"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Bibliografia" eSuperTypes="#//Arquivos">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="referencias" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referenciaGeral" eType="#//ReferenciaGeral"
+        eOpposite="#//ReferenciaGeral/bibliografia"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Secao">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nome" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="conteudo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="secao" upperBound="-1"
+        eType="#//Secao"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="documento" eType="#//Documento"
+        eOpposite="#//Documento/secoes"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tabela">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nome" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="conteudo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referenciaGeral" eType="#//ReferenciaGeral"
+        eOpposite="#//ReferenciaGeral/tabela"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferenciaGeral">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="imagem" eType="#//Imagem"
+        eOpposite="#//Imagem/referenciaGeral"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tabela" eType="#//Tabela"
+        eOpposite="#//Tabela/referenciaGeral"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bibliografia" eType="#//Bibliografia"
+        eOpposite="#//Bibliografia/referenciaGeral"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="documento" upperBound="-1"
+        eType="#//Documento" eOpposite="#//Documento/referencias"/>
+  </eClassifiers>
+</ecore:EPackage>
